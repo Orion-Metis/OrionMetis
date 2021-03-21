@@ -54,7 +54,7 @@ h2 { font-size: 2.2rem; }
 .tm-site-name {
 	color: #f23a53;
 	display: block;
-	font-size: 2.6rem;
+	font-size: 0.7rem;
 	font-weight: 400;
 }
 
@@ -82,7 +82,7 @@ h2 { font-size: 2.2rem; }
 }
 
 .tm-home-img-container {
-	background-image: url('../img/tm-home-img.jpg');
+	background-image: url('../img/banner.jpg');
 	background-size: auto;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -227,6 +227,45 @@ p { line-height: 1.9; }
 .tm-form-description { margin-top: 30px; }
 .tm-contact-form { padding-top: 20px; }
 
+footer .contact-info p {
+	margin-bottom: 25px;
+}
+
+footer .contact-info ul li {
+	margin: 10px 0px;
+}
+
+	footer .contact-info ul li span {
+		font-size: 13px;
+		color: #7a7a7a;
+		font-weight: 600;
+		letter-spacing: 0.3px;
+		width: 80px;
+		display: inline-block;
+	}
+
+	footer .contact-info ul li a {
+		font-size: 13px;
+		color: #4883ff;
+		letter-spacing: 0.5px;
+		text-decoration: none;
+	}
+
+.sub-footer p {
+	text-align: center;
+	display: inline-block;
+	background-color: #f4f4f4;
+	width: 100%;
+	margin-bottom: 0px;
+	padding: 30px 0px;
+	font-size: 15px;
+	color: #aaaaaa;
+}
+
+.sub-footer a {
+	text-decoration: none;
+	color: #4883ff;
+}
 #google-map {
     height: 333px;
     width: 100%;
@@ -400,6 +439,9 @@ p { line-height: 1.9; }
 	.tm-footer-links-container { padding-left: 0; }
 	.tm-xs-m-t { margin-top: 20px; }
 	.tm-btn { padding: 10px 30px; }
+	footer .useful-links {
+		margin-top: 60px;
+	}
 }
 
 @media(max-width: 510px) {
@@ -428,4 +470,12 @@ p { line-height: 1.9; }
 		margin-left: auto;
 		margin-right: auto;
 	}
+}
+.grey-background {
+	color: #c6c6c6;
+	background-color: #191919;
+	background-image: url('../img/grey-bg.jpg');
+	font-size: 1rem;
+	padding-top: 40px;
+	padding-bottom: 20px;
 }
