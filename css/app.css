@@ -285,6 +285,9 @@ footer .contact-info ul li {
 		padding-left: 4%;
 		padding-right: 4%;
 	}
+	img#isologo {
+		display: none;
+	}
 }
 
 @media (max-width: 991px){
@@ -351,12 +354,18 @@ footer .contact-info ul li {
 		padding-left: 15px; 
 		padding-top: 40px;
 	}
+	img#isologo {
+		display: none;
+	}
 }
 
 @media (max-width: 897px) {
 	.tm-btn {
 		padding: 10px 15px;
 		font-size: 1rem;
+	}
+	img#isologo {
+		display: none;
 	}
 }
 
@@ -433,6 +442,9 @@ footer .contact-info ul li {
 	}
 
 	.tm-contact-row-related-posts {	margin-top: 40px; }
+	img#isologo {
+		display: none;
+	}
 }
 
 @media (max-width: 543px) {
@@ -441,6 +453,9 @@ footer .contact-info ul li {
 	.tm-btn { padding: 10px 30px; }
 	footer .useful-links {
 		margin-top: 60px;
+	}
+	img#isologo {
+		display: none;
 	}
 }
 
@@ -469,6 +484,9 @@ footer .contact-info ul li {
 		max-width: 240px;
 		margin-left: auto;
 		margin-right: auto;
+	}
+	img#isologo {
+		display: none;
 	}
 }
 .grey-background {
