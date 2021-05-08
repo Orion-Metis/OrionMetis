@@ -9,7 +9,10 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ${{matrix.os}}
+    strategy: 
+      matrix:
+        os: [ubuntu-latest,windows-latest]
 
     steps:
     - uses: actions/checkout@v2
@@ -19,6 +22,4 @@ jobs:
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
    
-   publish:
-    needs: build
-  
+   
