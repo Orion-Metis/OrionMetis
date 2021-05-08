@@ -20,4 +20,5 @@ jobs:
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
         
   publish:
+    runs-on: windows-latest
     needs: build
