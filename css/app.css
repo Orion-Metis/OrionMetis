@@ -153,6 +153,8 @@ h4 {
 .tm-margin-t-big { margin-top: 90px; }
 .tm-margin-t-mid { margin-top: 60px; }
 .tm-margin-t-small { margin-top: 30px; }
+.tm-margin-l-small { margin-left: 30px; }
+.tm-margin-l-mid { margin-left: 50px; }
 
 .tm-text-link { 
 	color: #006699; 
@@ -496,4 +498,11 @@ footer .contact-info ul li {
 	font-size: 1rem;
 	padding-top: 40px;
 	padding-bottom: 20px;
+}
+
+.tm-page-header {
+	background-color: #5b5b5e;
+	color: white;
+	border-radius: 25px;
+	padding: 15px;
 }
