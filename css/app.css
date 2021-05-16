@@ -202,6 +202,9 @@ h4 {
 .tm-copyright-text { 
 	color: #999999; 
 	margin-bottom: 0;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 10px;
 }
 
 hr { border-top: 1px solid #CCCCCC; }
@@ -229,9 +232,13 @@ p { line-height: 1.9; }
 .tm-form-description { margin-top: 30px; }
 .tm-contact-form { padding-top: 20px; }
 
-footer .contact-info p {
-	margin-bottom: 25px;
-}
+	.tm-contact-form button{
+		float: right;
+	}
+
+	footer .contact-info p {
+		margin-bottom: 25px;
+	}
 
 footer .contact-info ul li {
 	margin: 10px 0px;
@@ -359,6 +366,10 @@ footer .contact-info ul li {
 	img#isologo {
 		display: none;
 	}
+	.tm-page-header {
+		width: 80%;
+		margin-left: 40px;
+	}
 }
 
 @media (max-width: 897px) {
@@ -368,6 +379,10 @@ footer .contact-info ul li {
 	}
 	img#isologo {
 		display: none;
+	}
+	.tm-page-header {
+		width: 90%;
+		margin-left: 40px;
 	}
 }
 
@@ -427,7 +442,7 @@ footer .contact-info ul li {
 		    -ms-flex-order: 2;
 		        order: 2;
 		margin-bottom: 0;
-		margin-top: 30px;		
+		margin-left: 30px;
 	}
 
 	.tm-sm-m-b { margin-bottom: 20px; }
@@ -506,4 +521,10 @@ footer .contact-info ul li {
 	border-radius: 25px;
 	padding-left: 15px;
 	padding-top: 5px;
+}
+
+@media (min-width: 544px) {
+	.navbar {
+		margin: -4px;
+	}
 }
