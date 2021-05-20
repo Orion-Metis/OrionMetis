@@ -72,7 +72,7 @@
 
                     <section>
                         <p class="tm-form-description">Please contact us for TDS (Technical Data Sheet) and MSDS (Material Safety Data Sheet)</p>
-                        <form class="form-horizontal" role="form" method="post">
+                        <form class="tm-contact-form" role="form" method="post">
 								<div class="form-group">
 										<input type="text" class="form-control" id="name" name="name" placeholder="Full Name" value="<?php echo htmlspecialchars($_POST['name']); ?>">
 										<?php echo "<p class='text-danger'>$errName</p>";?>
