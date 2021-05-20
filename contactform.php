@@ -4,7 +4,9 @@
 		$email = $_POST['email'];
 		$message = $_POST['message'];
 		$from = 'support@orionmetis.co.in'; 
-		
+		$headers =	'From: oriometis@gmail.com' . "\r\n" .
+					'Reply-To: oriometis@gmail.com' . "\r\n" .
+					'X-Mailer: PHP/' . phpversion();
 		// WARNING: Be sure to change this. This is the address that the email will be sent to
 		$to = 'krishnav4124@gmail.com'; 
 		
@@ -30,7 +32,7 @@
  
 		// If there are no errors, send the email
 		if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
-			if (mail ($to, $subject, $body, $from)) {
+			if (mail ($to, $subject, $body, $headers)) {
 				$result='<div class="alert alert-success">Thank You! I will be in touch</div>';
 			} else {
 				$result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
