@@ -1,4 +1,13 @@
 <?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+
 	if (isset($_POST["submit"])) {
 		$name = $_POST['name'];
 		$email = $_POST['email'];
@@ -29,14 +38,39 @@
 		if (!$_POST['message']) {
 			$errMessage = 'Please enter your message';
 		}
- 
+		$sender_name = "orionmetis-supportr";
+		$username = "support@orionmetis.co.in";
+		$password = "NoClean612%";
+		$mail = new PHPMailer(true);
+		$mail->isSMTP();
+		//$mail->SMTPDebug = 2;
+		$mail->Host = 'sg2plzcpnl466827.prod.sin2.secureserver.net';
+		$mail->SMTPAuth = true;
+  
+		$mail->SMTPSecure = 'tls';
+		$mail->Port = 587;
+	
+		$mail->setFrom($from, $sender_name);
+		$mail->Username = $username;
+		$mail->Password = $password;
+  
+		$mail->Subject = $subject;
+		$mail->msgHTML($body);
+		$mail->addAddress($email);
+		if (!$mail->send()) {
+		$error = "Mailer Error: " . $mail->ErrorInfo;
+			$result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
+		}
+		else {
+			$result='<div class="alert alert-success">Thank You! I will be in touch</div>';
+		}
 		// If there are no errors, send the email
-		if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
+		/*if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
 			if (mail ($to, $subject, $body, $from)) {
 				$result='<div class="alert alert-success">Thank You! I will be in touch</div>';
 			} else {
 				$result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
 			}
-		}
+		}*/
 	}
 ?>
