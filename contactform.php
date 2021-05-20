@@ -8,13 +8,9 @@
 		// WARNING: Be sure to change this. This is the address that the email will be sent to
 		$to = 'krishnav4124@gmail.com'; 
 		
-		$subject = "A query submitted by Mr/Ms "$name." from OrionMetis website ";
+		$subject = "A query submitted by Mr/Ms ".$name." from OrionMetis website ";
 		
-		$body = "Hi, \n 
-				This is $name and I am interested in the products shown, I have some query and thus writing an email \name
-				<span style="font-weight:bold">My query:</span> $message \n\n
-				Please write back to me to my email address : $email \n 
-				Thanks,\n $name";
+		$body = "Hi, \n This is $name and I am interested in the products shown, I have some query and thus writing an email \name My query:$message \n\n Please write back to me to my email address : $email \nThanks,\n $name";
 		
  
 		// Check if name has been entered

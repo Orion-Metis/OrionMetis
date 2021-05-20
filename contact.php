@@ -69,27 +69,32 @@
                     </section>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
-
                     <section>
                         <p class="tm-form-description">Please contact us for TDS (Technical Data Sheet) and MSDS (Material Safety Data Sheet)</p>
-                        <form class="tm-contact-form" role="form" method="post">
-								<div class="form-group">
-										<input type="text" class="form-control" id="name" name="name" placeholder="Full Name" value="<?php echo htmlspecialchars($_POST['name']); ?>">
-										<?php echo "<p class='text-danger'>$errName</p>";?>
-								</div>
-								<div class="form-group">
-										<input type="email" class="form-control" id="email" name="email" placeholder="Email" value="<?php echo htmlspecialchars($_POST['email']); ?>">
-										<?php echo "<p class='text-danger'>$errEmail</p>";?>
-								</div>
-								<div class="form-group">
-										<textarea class="form-control" rows="8" name="message" placeholder="Message"><?php echo htmlspecialchars($_POST['message']);?></textarea>
-										<?php echo "<p class='text-danger'>$errMessage</p>";?>
-								</div>
-                                <input id="submit" name="submit" type="submit" value="Send" class="tm-btn">
-								<div class="form-group">
-										<?php echo $result; ?>	
-								</div>
-							</form> 
+                       <form class="tm-contact-form" role="form" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="<?php echo htmlspecialchars($_POST['name']); ?>">
+                            <?php echo "<p class='text-danger'>$errName</p>";?>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="<?php echo htmlspecialchars($_POST['email']); ?>">
+                            <?php echo "<p class='text-danger'>$errEmail</p>";?>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="4" name="message"><?php echo htmlspecialchars($_POST['message']);?></textarea>
+                            <?php echo "<p class='text-danger'>$errMessage</p>";?>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
+                            <?php echo "<p class='text-danger'>$errHuman</p>";?>
+                        </div>
+                        <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+                        <div class="form-group">
+                            <div class="col-sm-10 col-sm-offset-2">
+                                <?php echo $result; ?>
+                            </div>
+                        </div>
+                    </form>
                     </section>
                 </div>
             </div>
