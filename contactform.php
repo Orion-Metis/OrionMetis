@@ -3,14 +3,14 @@
 		$name = $_POST['name'];
 		$email = $_POST['email'];
 		$message = $_POST['message'];
-		$from = 'orionmetis@gmail.com'; 
+		$from = 'support@orionmetis.co.in'; 
 		
 		// WARNING: Be sure to change this. This is the address that the email will be sent to
 		$to = 'krishnav4124@gmail.com'; 
 		
 		$subject = "A query submitted by Mr/Ms ".$name." from OrionMetis website ";
 		
-		$body = "Hi, \n This is $name and I am interested in the products shown, I have some query and thus writing an email \name My query:$message \n\n Please write back to me to my email address : $email \nThanks,\n $name";
+		$body = "Hi, \nThis is $name and I am interested in the products shown, I have some query and thus writing an email \nMy query:\n$message \n\nPlease write back to me to my email address : $email \nThanks,\n $name";
 		
  
 		// Check if name has been entered
