@@ -1,16 +1,4 @@
-
-<?php 
-$name =$_POST['contact_name'];
-$from =$_POST['contact_email];
-$message = $_POST['contact_message'];
-$subject = "Recieved email from '$name'";
-$to="krishnav4124@gmail.com";
-$headers="MIME-VERSION: 1.0" . "\r\n";
-$headers .= "Contect-type:text/html;charset=UTF-8" . "\r\n";
-$headers = "From: <$from> \r\n";
-?>
-
-
+<?php include("contactform.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -84,38 +72,25 @@ $headers = "From: <$from> \r\n";
 
                     <section>
                         <p class="tm-form-description">Please contact us for TDS (Technical Data Sheet) and MSDS (Material Safety Data Sheet)</p>
-                        <form action="index.html" method="post" class="tm-contact-form">
-                            <div class="form-group">
-                                <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name" required />
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email" required />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" id="contact_subject" name="contact_subject" class="form-control" placeholder="Subject" required />
-                            </div>
-                            <div class="form-group">
-                                <textarea id="contact_message" name="contact_message" class="form-control" rows="6" placeholder="Message" required></textarea>
-                            </div>
-
-                            <button type="submit" class="tm-btn">Submit</button>
-
-                            <?php 
-                                if(isset ($_POST('submit')))
-								{
-									if(mail($to,$subject,$message,$headers))
-									{
-										echo "Thanks for contactin us! We get back soon...";
-									}
-									else
-									{
-										echo "Failed to send an email";
-									}
-								}
-                            ?>
-                        </form>
+                        <form class="form-horizontal" role="form" method="post">
+								<div class="form-group">
+										<input type="text" class="form-control" id="name" name="name" placeholder="Full Name" value="<?php echo htmlspecialchars($_POST['name']); ?>">
+										<?php echo "<p class='text-danger'>$errName</p>";?>
+								</div>
+								<div class="form-group">
+										<input type="email" class="form-control" id="email" name="email" placeholder="Email" value="<?php echo htmlspecialchars($_POST['email']); ?>">
+										<?php echo "<p class='text-danger'>$errEmail</p>";?>
+								</div>
+								<div class="form-group">
+										<textarea class="form-control" rows="8" name="message" placeholder="Message"><?php echo htmlspecialchars($_POST['message']);?></textarea>
+										<?php echo "<p class='text-danger'>$errMessage</p>";?>
+								</div>
+                                <input id="submit" name="submit" type="submit" value="Send" class="tm-btn">
+								<div class="form-group">
+										<?php echo $result; ?>	
+								</div>
+							</form> 
                     </section>
-
                 </div>
             </div>
         </div>
