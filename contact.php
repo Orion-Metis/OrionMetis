@@ -84,9 +84,11 @@
                             <textarea class="form-control" rows="8" name="message" placeholder="Message"><?php echo htmlspecialchars($_POST['message']);?></textarea>
                             <?php echo "<p class='text-danger'>$errMessage</p>";?>
                         </div>
-                        <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
                         <div class="form-group">
                             <?php echo $result; ?>
+                        </div>
+                       <div class="form-group">
+                            <input id="submit" name="submit" type="submit" value="Send" class="tm-btn">
                         </div>
                     </form>
                     </section>

@@ -1,27 +1,16 @@
 <?php
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
-
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
-
 	if (isset($_POST["submit"])) {
 		$name = $_POST['name'];
 		$email = $_POST['email'];
 		$message = $_POST['message'];
-		$from = 'support@orionmetis.co.in'; 
-		$headers =	'From: oriometis@gmail.com' . "\r\n" .
-					'Reply-To: oriometis@gmail.com' . "\r\n" .
-					'X-Mailer: PHP/' . phpversion();
-		// WARNING: Be sure to change this. This is the address that the email will be sent to
-		$to = 'krishnav4124@gmail.com'; 
+
+		$headers .= 'From: <orionmetis@gmail.com>' . "\r\n";
+		$headers .= 'Cc: support@orionmetis.co.in' . "\r\n";
+		$to = 'orionmetis@gmail.com'; 
 		
 		$subject = "A query submitted by Mr/Ms ".$name." from OrionMetis website ";
 		
-		$body = "Hi, \nThis is $name and I am interested in the products shown, I have some query and thus writing an email \nMy query:\n$message \n\nPlease write back to me to my email address : $email \nThanks,\n $name";
+		$body = "Hi,\nMy query:\n$message\nPlease write back to me to my email address : $email \n\nThanks,\n $name";
 		
  
 		// Check if name has been entered
@@ -38,39 +27,14 @@ require 'PHPMailer/src/SMTP.php';
 		if (!$_POST['message']) {
 			$errMessage = 'Please enter your message';
 		}
-		$sender_name = "orionmetis-support";
-		$username = "orionmetis@gmail.com";
-		$password = "noClean612%";
-		$mail = new PHPMailer(true);
-		$mail->isSMTP();
-		//$mail->SMTPDebug = 2;
-		$mail->Host = 'smtp.gmail.com';
-		$mail->SMTPAuth = true;
-  
-		$mail->SMTPSecure = 'tls';
-		$mail->Port = 587;
-	
-		$mail->setFrom($from, $sender_name);
-		$mail->Username = $username;
-		$mail->Password = $password;
-  
-		$mail->Subject = $subject;
-		$mail->msgHTML($body);
-		$mail->addAddress($email);
-		if (!$mail->send()) {
-		$error = "Mailer Error: " . $mail->ErrorInfo;
-			$result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
-		}
-		else {
-			$result='<div class="alert alert-success">Thank You! I will be in touch</div>';
-		}
+ 
 		// If there are no errors, send the email
-		/*if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
-			if (mail ($to, $subject, $body, $from)) {
+		if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
+			if (mail ($to, $subject, $body, $headers)) {
 				$result='<div class="alert alert-success">Thank You! I will be in touch</div>';
 			} else {
 				$result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
 			}
-		}*/
+		}
 	}
 ?>
