@@ -38,13 +38,13 @@ require 'PHPMailer/src/SMTP.php';
 		if (!$_POST['message']) {
 			$errMessage = 'Please enter your message';
 		}
-		$sender_name = "orionmetis-supportr";
-		$username = "support@orionmetis.co.in";
-		$password = "NoClean612%";
+		$sender_name = "orionmetis-support";
+		$username = "orionmetis@gmail.com";
+		$password = "noClean612%";
 		$mail = new PHPMailer(true);
 		$mail->isSMTP();
 		//$mail->SMTPDebug = 2;
-		$mail->Host = 'sg2plzcpnl466827.prod.sin2.secureserver.net';
+		$mail->Host = 'smtp.gmail.com';
 		$mail->SMTPAuth = true;
   
 		$mail->SMTPSecure = 'tls';
