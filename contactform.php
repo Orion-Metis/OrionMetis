@@ -7,10 +7,8 @@
 		$headers .= 'From: <orionmetis@gmail.com>' . "\r\n";
 		$headers .= 'Cc: support@orionmetis.co.in' . "\r\n";
 		$to = 'orionmetis@gmail.com'; 
-		
-		$subject = "A query submitted by Mr/Ms ".$name." from OrionMetis website ";
-		
-		$body = "Hi,\nMy query:\n$message\nPlease write back to me to my email address : $email \n\nThanks,\n $name";
+		$subject = "Website Submission from Mr./Ms. ".$name." ";
+		$body = "Dear OrionMetis support team,\n Please find my query below:\n$message\nPlease write back to me to my email address : $email \n\nThanks,\n $name";
 		
  
 		// Check if name has been entered
