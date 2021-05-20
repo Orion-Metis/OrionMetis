@@ -4,7 +4,7 @@
 		$email = $_POST['email'];
 		$message = $_POST['message'];
 
-		$headers .= 'From: <orionmetis@gmail.com>' . "\r\n";
+		$headers .= 'From: <support@orionmetis.co.in>' . "\r\n";
 		$headers .= 'Cc: support@orionmetis.co.in' . "\r\n";
 		$to = 'orionmetis@gmail.com'; 
 		$subject = "Website Submission from Mr./Ms. ".$name." ";
