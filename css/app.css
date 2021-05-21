@@ -10,7 +10,6 @@ body {
 	color: #48484b;
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	font-size: 18px;
-	font-weight: 300;
 	overflow-x: hidden;
 }
 
@@ -74,7 +73,7 @@ h2 { font-size: 2.2rem; }
 
 }
 
-.tm-gold-text { color: #f23a53; }
+.tm-gold-text { color: #f23a53; font-weight:bold }
 
 .tm-section {
 	padding-top: 80px;
