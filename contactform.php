@@ -7,9 +7,10 @@
         
 		$headers .= 'From: <support@orionmetis.co.in>' . "\r\n";
 		$headers .= 'Cc: support@orionmetis.co.in' . "\r\n";
+		$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 		$to = 'orionmetis@gmail.com'; 
 		$subject = "Website query submission from Mr./Ms. ".$name." ";
-		$body = "Dear support team,\n\nThis is ".$name." writing an email on behalf of my company: $company. Please find my query below:\nMESSAGE\n$message.\n\nPlease write back to me to my email address : $email\n\nThanks,\n$name";
+		$body = "Dear support team,<br><br>This is ".$name.", writing an email on behalf of my company <strong>$company</strong>.<br><br>Please find my message below.<br>$message.<br><br><i>To discuss further on this topic, kindly write back to me on my email address : $email</i><br><br>Thanks,<br>$name";
  
 		// Check if name has been entered
 		if (!$_POST['name']) {
