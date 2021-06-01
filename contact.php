@@ -81,6 +81,10 @@
                             <?php echo "<p class='text-danger'>$errEmail</p>";?>
                         </div>
                         <div class="form-group">
+                            <input type="text" class="form-control" id="company" name="company" placeholder="Company Name" value="<?php echo htmlspecialchars($_POST['name']); ?>">
+                            <?php echo "<p class='text-danger'>$errCompanyName</p>";?>
+                        </div>
+                        <div class="form-group">
                             <textarea class="form-control" rows="8" name="message" placeholder="Message"><?php echo htmlspecialchars($_POST['message']);?></textarea>
                             <?php echo "<p class='text-danger'>$errMessage</p>";?>
                         </div>
