@@ -283,6 +283,11 @@ footer .contact-info ul li {
 .tm-contact-right { padding-left: 30px; }
 .tm-p-small { font-size: 1rem; }
 
+img#logo {
+	width:160px; 
+	height:90px;
+}
+
 @media (max-width: 1199px) {
 	.tm-2-col-left { padding-right: 0; }
 	.tm-2-col-right { padding-left: 0; }
